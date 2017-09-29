@@ -14,6 +14,7 @@ int main(int argc, char **argv)
 	cout << "Podaj promień koła: ";
     cin >> r;
     cout << "Pole koła: " << M_PI * r * r << endl;
+    cout << "Obwód koła: " << 2*r*M_PI << endl;
 
 	return 0; 
 }
