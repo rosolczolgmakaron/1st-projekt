@@ -1,1 +1,2 @@
-Repozytorium z kodami z informatyki
+# Kodowanie w domu
+# Kodowanie w domu

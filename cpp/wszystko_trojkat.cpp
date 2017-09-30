@@ -9,6 +9,8 @@ int main(int argc, char **argv)
     a = b = c = 0;
     float x, y, z, p;
     x = y = z = p = 0;
+    float ka, kb, kc;
+    ka = kb = kc = 0;
     
     cout << "Podaj 3 boki trójkąta." << endl;
     cout << "Bok a:";
@@ -18,10 +20,15 @@ int main(int argc, char **argv)
     cout << "Bok c:";
     cin >> c; 
     
-    x= (b*b+c*c-a*a);
-    y= (c*c+a*a-b*b);
-    z= (a*a+b*b-c*c);
+    x = (b*b+c*c-a*a);
+    y = (c*c+a*a-b*b);
+    z = (a*a+b*b-c*c);
     p = (a+b+c)/2;
+    ka = 180*(acos(x/(2*b*c))/M_PI);
+    kb = 180*(acos(y/(2*a*c))/M_PI);
+    kc = 180*(acos(z/(2*a*b))/M_PI);
+    
+    
     
     if (a+b>c && a+c>b && b+c>a)
     {
@@ -33,9 +40,25 @@ int main(int argc, char **argv)
     cout << "Wysokość padająca na bok b ma długość:" << 2*sqrt(p*(p-a)*(p-b)*(p-c))/b << endl;
     cout << "Wysokość padająca na bok c ma długość:" << 2*sqrt(p*(p-a)*(p-b)*(p-c))/c << endl;
     cout << "" << endl;
-    cout << "Kąt na przeciwko boku a:" << 180*(acos(x/(2*b*c))/M_PI) << "∘" << endl;
-    cout << "Kąt na przeciwko boku b:" << 180*(acos(y/(2*a*c))/M_PI) << "∘" << endl;
-    cout << "Kąt na przeciwko boku c:" << 180*(acos(z/(2*a*b))/M_PI) << "∘" << endl;
+        
+        if (ka<90 && kb<90 && kc<90)
+        {
+            cout << "Trójkąt ostrokątny." << endl;
+        }
+        
+        if (ka>90 || kb>90 || kc>90)
+        {
+            cout << "Trójkąt rozwartokątny." << endl;
+        }
+        
+        
+        {
+            //cout << "Trójkąt prostokątny." << endl;
+        }
+        
+        cout << "Kąt na przeciwko boku a:" << ka << "∘" << endl;
+        cout << "Kąt na przeciwko boku b:" << kb << "∘" << endl;
+        cout << "Kąt na przeciwko boku c:" << kc << "∘" << endl;
     }
     
     else
@@ -47,8 +70,6 @@ int main(int argc, char **argv)
     {
     cout << "Z podanych boków nie można zbudować trójkąta." << endl;
     }
-    
-    
     
     return 0;
 }

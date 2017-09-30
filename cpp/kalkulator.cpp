@@ -15,11 +15,11 @@ int main(int argc, char **argv)
     a = b = 0;
     
     cout << "Podaj działanie." << endl;
-    cout << "Liczba a:";
+    //cout << "Liczba a:";
     cin >> a;
-    cout << "znak: ";
+    //cout << "znak: ";
     cin >> znak;
-    cout << "Liczba b:";
+    //cout << "Liczba b:";
     cin >> b;
     
     if (znak == '+')
