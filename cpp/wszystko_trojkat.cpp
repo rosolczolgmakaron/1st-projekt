@@ -51,7 +51,7 @@ int main(int argc, char **argv)
             cout << "Trójkąt rozwartokątny." << endl;
         }
         
-        
+        //if (ka=90 || kb=90 || kc=90)
         {
             //cout << "Trójkąt prostokątny." << endl;
         }
