@@ -32,9 +32,20 @@ int main(int argc, char **argv)
     cout << "Punkt o współrzędnych  (" << x << "," << y << ") znajduje się w IV ćwiartce." << endl;
     }
     
+    if (x==0 && y==0)
+    {
+    cout << "Punkt o współrzędnych  (0,0)." << endl;
+    }
     
+    if (x==0)
     {
     cout << "Punkt o współrzędnych  (" << x << "," << y << ") znajduje się na osi Ox." << endl;
     }
+
+    if (y==0)
+    {
+    cout << "Punkt o współrzędnych  (" << x << "," << y << ") znajduje się na osi Oy." << endl;
+    }
+    
     return 0;
 }
