@@ -22,24 +22,26 @@ int main(int argc, char **argv)
     //cout << "Liczba b:";
     cin >> b;
     
+    cout << "=";
+    
     if (znak == '+')
     {
-    cout << a+b << endl;
+        cout << a+b << endl;
     }
     
     if (znak == '-')
     {
-    cout << a-b << endl;
+        cout << a-b << endl;
     }
     
     if (znak == '*')
     {
-    cout << a*b << endl;
+        cout << a*b << endl;
     }
     
     if (znak == '/')
     {
-    cout << a/b << endl;
+        cout << a/b << endl;
     }
     
     return 0;
