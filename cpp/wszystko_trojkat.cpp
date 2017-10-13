@@ -23,7 +23,7 @@ int main(int argc, char **argv)
     x = (b*b+c*c-a*a);
     y = (c*c+a*a-b*b);
     z = (a*a+b*b-c*c);
-    p = (a+b+c)/2;
+    p = 0.5*(a+b+c);
     ka = 180*(acos(x/(2*b*c))/M_PI);
     kb = 180*(acos(y/(2*a*c))/M_PI);
     kc = 180*(acos(z/(2*a*b))/M_PI);
