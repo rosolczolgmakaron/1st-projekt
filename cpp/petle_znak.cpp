@@ -1,5 +1,5 @@
 /*
- * petla switch
+ * petla 
  */
  
  #include <iostream>
@@ -9,18 +9,20 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-    char zn=0;
-    
-    while(zn==t || zn==T || zn==n || zn==N) {
+    char zn='t';
+
+    while(zn == 't' || zn == 'T' || zn == 'n' || zn == 'N' ) {
         cout<<"Podaj znak."<<endl;
         cin>>zn;
-        cout<<""<<endl;
+
+        //if(zn=='t' || zn=='T' || zn=='n' || zn=='N')
+            //{
+                //cout<<"Podany znak to "<< zn<< endl;
+                //cout<< ""<< endl;
+            //}
+        //else
+            //break;
+
     };
-    
-    switch
-    
-
-
-
     return 0;
 }
