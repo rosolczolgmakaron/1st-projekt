@@ -6,7 +6,11 @@ int main(int argc, char **argv)
 {
     int a = 0;
     int b = 0;
+    int iloraz=0;
+    int wynik=0;
     
+   while(b==0)
+   {
     cout << "Podaj dzielną: " << endl;
     cout << "Dzielna: ";
     cin >> a;
@@ -14,15 +18,23 @@ int main(int argc, char **argv)
     cout << "Podaj dzielnik: " << endl;
     cout << "Dzielnik: ";
     cin >> b;
-    cout<< ""<<endl;
+	}
     
-    if(b!=0)
+    while(true)
     {
-        for(a=a-b; a>=0; a-=b)
+        wynik=a-b;
+        
+        if(wynik>=0)
         {   
-            cout<< "Liczba a jest równa: "<< a<< endl;
+            iloraz++;
+            a=0;
+            a+=wynik;
         }
+        else break;
     }
+    
+    cout<<"Iloraz jest równy: "<< iloraz;
     
     return 0;
 }
+
