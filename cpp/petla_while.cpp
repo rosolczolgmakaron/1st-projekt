@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
     while(suma<=100) //pętla nieskończona
     {
-        cout << "Podaj liczbę: " << endl;
+        cout << "Podaj liczbe: " << endl;
         cin >> liczba ;
         suma += liczba;
         cout << "Suma: "<< suma << endl;
