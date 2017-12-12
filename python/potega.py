@@ -4,12 +4,23 @@
 # a1 = a
 # an = a * ... * a (n-czynników) dla n należących do N+ - {0,1}
 
+
 def potega_it(podst, wykladnik):
     """Funkcja oblicza iteracyjnie potęgę l. naturalnej"""
     wynik = 1
     for i in range(wykladnik):
         wynik *= podst
     return wynik
+
+
+# a0 = 1 - warunek brzegowy
+# an = a(n-1) * a dla n > 0
+
+
+def potega_rek(a, n):
+    if n == 0:
+        return 1
+    return potega_rek(a, n - 1) * a
 
 
 def main(args):
@@ -25,8 +36,8 @@ def main(args):
     assert potega_it(2, 3) == 8
 
     print("Potęga = ", potega_it(podst, wykladnik))
-    #wynik = potega_it(podst, wykladnik)
-    #print("Potęga = ", wynik)
+    # wynik = potega_it(podst, wykladnik)
+    # print("Potęga = ", wynik)
 
     return 0
 
