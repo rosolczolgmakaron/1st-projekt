@@ -5,6 +5,7 @@
 def wynik(n, tb):
     # n-wyraz ciągu
     # tb- tablica
+    n = tb[0]
     while n > 0:
         if n == 1:
             return tb[0]

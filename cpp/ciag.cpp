@@ -1,18 +1,24 @@
 /*
-/  main.cpp
-/  C++
+/  ciag.cpp
 */
 
 #include <iostream>
 using namespace std;
 
 
-int wartosc (int n)
+int wartosc (int a)
 {
-    if (n==1) {
+    if (a==1)
+    {
         return 1;
-    } else {
-        return wartosc((n-1)+(2*n)+(n-2));
+    }
+    else if (a==2)
+    {
+        return 2;
+    }
+    else
+    {
+        return wartosc();
     }
 }
 

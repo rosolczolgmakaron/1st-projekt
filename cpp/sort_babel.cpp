@@ -1,3 +1,8 @@
+/*
+ * sort_babel.cpp
+ */
+
+
 #include <iostream>
 
 using namespace std;
@@ -26,21 +31,15 @@ void zamien(int &a, int &b)
     b= tmp;
 }
 
-void sort_wyb(int t[], int n)
-// sortowanie przez wybór
+void sort_bable(int t[], int n)
 {
-    int k;
     for (int i = 0; i < n; i++)
     {
-        k = i;
-        for (int j = i + 1; j < n; j++)
-        {
-            if (t[j] < t[k])
-            {
-                k = j;
-            }
-            zamien(t[i], t[k]);
-        }
+        for (int j = 1; j < n - i; j++)
+        { 
+            if (t[j-1] > t[j])
+                zamien(t[j-1], t[j]0;
+        } 
     }
 }
 
@@ -49,8 +48,9 @@ int main(int argc, char **argv)
     const int ile = 10;
     int tab[ile];
     wypelnij(tab, ile, 20);
+    drukuj(tab, ile);	
+    sort_babel(tab, ile);
     drukuj(tab, ile);
-    sort_wyb(tab, ile);
-    drukuj(tab, ile);
-    return 0;
+	return 0;
 }
+
