@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-12T11:14:02+01:00
+
+====== Algorytmy ======
+Created piątek 12 styczeń 2018
+
+==== Własności: ====
+1. Poprawność
+2. Skończoność
+3. Złożoność
+4. Efektywność
+
+Specyfikacja problemu zawiera nie tylko opis danych i wyników, ale również opis związków, które między nimi zachodzą.
+
+Algorytm jest całkowicie poprawny, jeśli dla wszystkich danych wejściowych spełniających warunki początkowe wyprowadzi wyniki spełniające warunki końcowe i obliczenia zostaną zakończone.
+Algorytm jest częściowo poprawny, jeśli dla obliczeń,które się skończą,ich wyniki są poprawne względem warunków początkowych i końcowych. ( nie jest konieczne wykazanie,że obliczenia kończą się dla wszystkich poprawnych danych).
+Algorytm uniwersalny, to algorytm, który umożliwia rozwiązanie dowolnego zadania z pewnej klasy zadań. Przykładem może być algorytm sortowania,który umożliwia uporządkowanie dowolnego ciągu danych.
+
+Przy testowaniu algorytmów należy uważać na błędy logiczne.

@@ -1,0 +1,12 @@
+Specyfikacja zadania:
+Zadanie: Wypisz kolejne dodatnie liczby nieparzyste mniejsze od n.
+Dane: Dowolna liczba naturalna.
+Wynik: Wszystkie dodatnie liczby nieparzyste mniejsze od n.
+Lista kroków:
+1. Pobierz wartość liczby n.
+2. Zmiennej i przypisz wartość 1.
+3. Jeżeli i = n, przejdź do kroku 7.
+4. Wyprowadź liczbę nieparzystą: i.
+5. Zwiększ wartość zmiennej i o 2.
+6. Przejdż do kroku 3.
+7. Zakończ algorytm.
