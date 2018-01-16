@@ -13,8 +13,18 @@ Created piątek 12 styczeń 2018
 
 Specyfikacja problemu zawiera nie tylko opis danych i wyników, ale również opis związków, które między nimi zachodzą.
 
-Algorytm jest całkowicie poprawny, jeśli dla wszystkich danych wejściowych spełniających warunki początkowe wyprowadzi wyniki spełniające warunki końcowe i obliczenia zostaną zakończone.
+**1.**Algorytm jest całkowicie poprawny, jeśli dla wszystkich danych wejściowych spełniających warunki początkowe wyprowadzi wyniki spełniające warunki końcowe i obliczenia zostaną zakończone.
 Algorytm jest częściowo poprawny, jeśli dla obliczeń,które się skończą,ich wyniki są poprawne względem warunków początkowych i końcowych. ( nie jest konieczne wykazanie,że obliczenia kończą się dla wszystkich poprawnych danych).
 Algorytm uniwersalny, to algorytm, który umożliwia rozwiązanie dowolnego zadania z pewnej klasy zadań. Przykładem może być algorytm sortowania,który umożliwia uporządkowanie dowolnego ciągu danych.
 
 Przy testowaniu algorytmów należy uważać na błędy logiczne.
+
+**2**.Poprawny algorytm musi być skończony. Algorytm jest skończony, gdy zapewnia wyznaczenie wyniku w skończonej liczbie kroków.
+
+**3.**Teoria złożoności obliczeniowej – dział teorii obliczeń, którego głównym celem jest określanie ilości zasobów potrzebnych do rozwiązania problemów obliczeniowych. Rozważanymi zasobami są takie wielkości jak czas, pamięć lub liczba procesorów.
+	a) Złożoność czasowa jest pewnego rodzaju funksją wilekości zbioru danych, stąd cześto w literaturze oznacza się ją symbolem O(f(n)), gdzie f(n) — pewna funkcja, np. f(n), f(n^2), f(n!).
+	b) Złożoność pamięciowa — ile pamięci należy przeznaczyć na wykonanie danego algorytmu.
+**4.**Ze złożonością wiąże się pojęcie algorytmu optymalnego. Algorytm optymalny to taki, który dal rozwiązania danego problemu jest bezwzglednie najlepszy 9czego mozna dowieść matematycznie). Złożoność obliczeniowa algorytmu jest pojęciem teoretycznym. W praktyce bardziej interesuje nas efektywność algorytmu, która bierze pod uwagę praktyczne zastosowanie algorytmu w programie.
+
+Efektywność algorytmu to ocena złożoności algorytmu w praktyce, np. przy porównaniu różnych metod rozwiązywania tego samego problemu.
+  
