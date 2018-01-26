@@ -34,6 +34,7 @@ int main(int argc, char **argv)
     
     while(i-1 >= 0){
         i--;
+
         cout << reszty[i];
     }
 	return 0;
