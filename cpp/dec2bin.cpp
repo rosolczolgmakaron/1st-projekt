@@ -4,39 +4,61 @@
 
 
 #include <iostream>
+
 using namespace std;
 
 int main(int argc, char **argv)
 {
+    
     char znakA = 'A';
     char znakB = 'B';
-    int l14 = 14;
-    int l15 = 15;
+    int l14 = 65;
+    int l15 = 66;
+    cout<< (int)znakA <<(int)znakB <<endl;
+    cout<<(char)l14 << (char)l15<<endl;
     
-    cout << (int)znakA << (int)znakB << endl;
-    cout << (char)l14 << (char)l15 << endl;
-	int liczba = 0;
-    int podstawa = 0;
+    int n = 0; //120 > 1111000
+    int p = 2;
     int reszty[16];
-    int i =0;
+    int i = 0;
     
-    cout << "Podaj liczbę i podstawę: ";
-    cin >> liczba >> podstawa;
-    do{
-        reszty[i] =  liczba%podstawa;
-        liczba = liczba / podstawa;
+    cout<<"Podaj liczbe(dec): ";
+    cin>>n;
+    cout<<"Podaj podstawe: ";
+    cin>>p;
+    
+    do
+    {
+        reszty[i] = n % p;
+        n /= p;
         i++;
-    } while(liczba>0);
+    }while(n > 0);
     
-    //~for (int j = i - 1; j >= 0; j--){
-        //~cout << reszty[j];
-    //~}
+    //~ for(int j = i-1; j>=0;j--)
+    //~ {
+      //~ if(p > 10 && reszty[j]>=10)
+        //~ {
+            //~ cout<<(char)(reszty[j]+55);
+        //~ }
+        //~ else
+        //~ {
+            //~ cout<<reszty[j];
+        //~ }
+    //~ }
     
-    while(i-1 >= 0){
+    //i--;
+    while(i-1>=0)
+    {
         i--;
-
-        cout << reszty[i];
+        if(p > 10 && reszty[i]>=10)
+        {
+            cout<< (char)(reszty[i]+55);
+        }
+        else
+        {
+            cout<<reszty[i];
+        }
     }
-	return 0;
-}
 
+    return 0;
+}

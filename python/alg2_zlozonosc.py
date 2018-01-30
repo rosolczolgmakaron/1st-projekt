@@ -7,7 +7,7 @@ def main(args):
     while(a < 1 or a > 99):  # wyznaczam poprawny zakres a
         a = int(input("Podaj liczbę: "))
 
-    for i in range(2, a+1, 2):
+    for i in range(2, a + 1, 2):
         if a == i:
             print("Parzysta")
             return 0
