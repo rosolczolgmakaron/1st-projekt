@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-31T12:24:15+01:00
+
+====== Kompresja ======
+Created środa 31 styczeń 2018
+
+S.O.S. — 000 111 000
+
+x na końcu kodu oznacza iż jest to archiwum w którym zachodzi komnpresja bezstartna
+
+
+kompresja stratna dotyczny multimediów
+
+MKV — kontener
