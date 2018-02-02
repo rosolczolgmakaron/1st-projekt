@@ -13,3 +13,23 @@ x na końcu kodu oznacza iż jest to archiwum w którym zachodzi komnpresja bezs
 kompresja stratna dotyczny multimediów
 
 MKV — kontener
+
+bitrate — ilość danych na sekunde (przepływność)
+MP3 ma 128 bitow/sekunde
+CD 256 bit/s
+
+kb — kilobit
+Mb — megabit
+
+ASCII:
+00 Null — nic
+10 Line Feed — koniec linii
+13 Carriage Return — powrót karetki
+
+Kodowanie słownikowe:
+The rain in Spain falls mainly on the plain
+The rain <3, 3>Sp<9,3>falls m<11,3>ly on t<34,3> pl<34 ,3> =>
+
+ile znaków wstecz => 6 bitów
+długość ciągu => 2 bity
+współczynnik kompresji = rozmiar danych skompresowanych / rozmiar danych nieskompresowanych
