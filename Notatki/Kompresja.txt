@@ -27,9 +27,16 @@ ASCII:
 13 Carriage Return — powrót karetki
 
 Kodowanie słownikowe:
-The rain in Spain falls mainly on the plain
-The rain <3, 3>Sp<9,3>falls m<11,3>ly on t<34,3> pl<34 ,3> =>
+The rain in Spain falls mainly on the plain => 44 bajty
+The rain <3, 3>Sp<9,3>falls m<11,3>ly on t<34,3> pl<34 ,3>. => 33 bajty
+współczynnik kompresji —  33/44=0,75=75%
 
 ile znaków wstecz => 6 bitów
 długość ciągu => 2 bity
 współczynnik kompresji = rozmiar danych skompresowanych / rozmiar danych nieskompresowanych
+
+sposoby kompresji:
+1. ZIP
+2. RAR
+3. 7z
+4. TAR
