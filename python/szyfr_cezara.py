@@ -8,9 +8,13 @@ def szyfruj(tekst, klucz):
     """
     szyfrogram = ""
     klucz %= 26
-    for znak in tekst:
-        ascii = ord(znak) + klucz
-        if ascii > 90:
+    for i in tekst:
+        ascii = ord(i) + klucz
+        if ord(i) == 32:
+            ascii = 32
+        elif ascii > 90:
+            ascii -= 26
+        elif ascii > 122:
             ascii -= 26
         szyfrogram += chr(ascii)
     return szyfrogram
@@ -18,12 +22,20 @@ def szyfruj(tekst, klucz):
 
 def deszyfruj(szyfrogram, klucz):
     tekst = ""
-    pass
-    return tekst
+    for i in szyfrogram:
+        ascii = ord(i) - klucz
+        if ord(i) == 32:
+            ascii = 32
+        elif ascii > 90:
+            ascii -= 26
+        elif ascii > 122:
+            ascii -= 26
+    tekst += chr(ascii)
 # dokończyć funkcje deszyfruj
 # obsłużyć małe i duże litery
 # obsługa zdań o dużych i małych literach, spacje powinny być niekodowane
 # na 6 - obsłużyć polskie znaki
+
 
 def main(args):
     tekst = input("Podaj tekst: ")

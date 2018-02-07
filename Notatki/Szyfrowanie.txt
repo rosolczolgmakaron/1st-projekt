@@ -13,4 +13,13 @@ Do odszyfrowania szyfrogramu potrzebny jest algorytm szyfrowania oraz klucz.
 ===== Rodzaje szyfrów: =====
 1. Podstawieniowe:
 	Szyfr Cezara
+2. Szyfr przestawieniowy
+	TOBEORNOTTOBETHATISTHEQUESTIONAND
+	
+	TOBEORNOTT
+	OBETHATIST
+	HEQUESTION
+	AND.......
+	
+	TOHAOBENEEQDETU.OHE.    itd.
 	
