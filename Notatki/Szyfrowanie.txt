@@ -22,4 +22,15 @@ Do odszyfrowania szyfrogramu potrzebny jest algorytm szyfrowania oraz klucz.
 	AND.......
 	
 	TOHAOBENEEQDETU.OHE.    itd.
+3. Szyfrowanie asymetryczne:
+	-szyfrowanie stron internetowych
+		- protokół HTTPS - szyfrowanie dane przy pomocy protokołu SSL (protokół do zabezpieczenia), który nazywa się teraz TLS (Transport Layer Security)
+		- certyfikat
+	- szyfrowanie poczty za pomocą Pretty Good Privacy
+	- podpis elektroniczny
+	
+	Klucz publiczny - ciąg liczb który podajemy do publicznej wiadomości
+	Klucz prywatny - ciąg liczb który musi buć chroniony
+	
+	Algorytm RSA
 	
