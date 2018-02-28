@@ -10,7 +10,7 @@ def wypisz_nieparzyste(n):
 def main(args):
     n = int(input("Podaj wartosc liczby n:"))
 
-    wypisz_nieparzyste(n)
+    wypisz_nieparzyste(n) 
 
     return 0
 
