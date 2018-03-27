@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-03-21T11:58:29+01:00
+
+====== Sieci ======
+Created środa 21 marzec 2018
+
+Temat 11 w podręczniku. LOL
+
+Serwery DNS
+
+Adres URL
+
+Top lvl domein
+
+Poddomeny
+
+https://pl.wikipedia.org/wiki/Uniform_Resource_Locator
+
+Port protokołu – pojęcie związane z protokołami używanymi w Internecie do identyfikowania procesów działających na odległych systemach. Jest to jeden z parametrów gniazda.
+
+porty o numerach od 0 do 1000 to porty dobrze znane (mają swoje nazwy)
+numer sekwencyjny
+
+Protokół TCP
+protokół UDP
+Jest pula dresów prywatnych i publicznych
+
+3 pierwsze cyfry adresu IP to adres sieci
+wartości mogą być od 1-254
+adres 255 to adres broadcast
+
+https://pl.wikipedia.org/wiki/I[[https://pl.wikipedia.org/wiki/IP|P]][[https://pl.wikipedia.org/wiki/IPv|v]][[https://pl.wikipedia.org/wiki/IPv4|4]]
+
+Network Adress Translation 

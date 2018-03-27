@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-03-13T13:17:30+01:00
+
+====== Linux ======
+Created wtorek 13 marzec 2018
+
+Linux — jądro (nie system)
+Systemy Microsoft'u i Apple'a to systemy własnościowe i zamknięte.
+open source — otwarte oprogramowanie — np. jądro Linuxa
+Dystrybucja linuxa składa się z jądra oraz oprogramowania dodatkowego.

@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-03-02T11:03:03+01:00
+
+====== Komputer i system operacyjny ======
+Created piątek 02 marzec 2018
+
+
+==== Architektura von Neumanna: ====
+1. Pierwszym składnikiem budowy komputera jest procesor — jednostka arytmetyczna.
+	a. Napięcie od 3-5V w procesorze daje logiczną 1, jednak gdy jest około 0,2V daje logiczne 0.
+	b. Procesor składa się z rejestrów (np. akumulator) — komórek w których zapisywane są różne dane
+	c. Rozmiary rejestrów współczesnych procesorów to 64-bity
+2. Pamięć RAM(Random Access Memory) — swobodnego dostepu; dane są ulotne
+	a. Część danych pochodzi z pamięci ROM(pamięć tylko do odczytu); zachowuje dane na stałe
+	b. BIOS czy też UEFI decyduje jakie urządzenia może obsługiwać system; 
+3. Jednostka sterująca — synchronizuje pracę logicznych części komputera. Łączy komunikuje się z pamięcią i procesorem za pomocą szyny systemowej.
+	a. szyna taktująca
+	b. szyna danych
+4. Urządzenia wejścia i wyjścia:
+	a. Twarde dyski
+	b. Mysz
+	c. Klawiatura
+	d. Monitor
+	e. Drukarka
+	f. Projektor
+	g. etc.
+

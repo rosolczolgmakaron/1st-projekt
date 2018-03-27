@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-03-09T11:03:36+01:00
+
+====== Historia informatyki ======
+Created piątek 09 marzec 2018
+
+1. MS-DOS (ang. Microsoft Disk Operating System) – system operacyjny stworzony przez firmę Microsoft na podstawie nabytego przez nią kodu źródłowego systemu QDOS (ang. Quick and Dirty Operating System) stworzonego przez Seattle Computers. Jest to wersja systemu operacyjnego DOS przeznaczona dla komputerów IBM-PC.
+	a. polecenia:
+		1. dir
+
+\ oznacza katalog główny
+w linuxie —  ls /
+w dosie — dir [[/:\]]
+.. — poziom do góry w dosie (w linuxie tak samo)
+
+zapis plików w DOS zawierają 8 liter nazwy i 3 rozszerzenia
+w Windowsie są rozszerzenia obecnie nawet dłuższe niż 3
+w linuxie plik rozpoznawany jest przez sygnature w nagłówku — nie potrzebne rozszerzenia
+
+exe albo com — 
+
+atrybuty:
+a — pliki zapisane na dysku
+r — tylko do odczytu
+h — plik ukryty
+s — plik systemowy
+
+DOS był tak skonstruowany że nie obsługiwał większej pamięci niż 640 KB.
+Programy miały maksymalny rozmiar 64 KB
+
+DOS wykorzystywał tryb rzeczywisty procesora
+
+Windows 8 — interfejs kafelkowy — shit na pc
+innne wersje interfejs ikonowy
