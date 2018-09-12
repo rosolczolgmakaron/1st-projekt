@@ -42,8 +42,8 @@ def main(args):
         elif znak == '/':
             wynik = dziel(a, b)
         print(wynik)
-        i = input("Czy chcesz kontynuować prace z kalkulatorem? tak(1)/nie(0): ")
-
+        c = int(input("Czy chcesz kontynuować prace z kalkulatorem? tak(0)/nie(1): "))
+        i -= c
 
     return 0
 
