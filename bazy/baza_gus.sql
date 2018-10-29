@@ -4,7 +4,7 @@ drop table if exists powierzchnia_miasta;
 drop table if exists dane_demograficzne;
 
 create table miasta (
-    id_miasta integer primary key autoincrement,
+    id_miasta integer primary key,
     nazwa_miasta text(30),
     nazwqa_wojewodztwa text(30)
 );
@@ -18,7 +18,7 @@ create table powierzchnia_miasta (
 );
 
 create table dane_demograficzne (
-    id integer primary key autoincrement,
+    id INTEGER,
     liczba_mieszkancow integer,
     liczba_kobiet integer,
     grupa_wiekowa text(15),
