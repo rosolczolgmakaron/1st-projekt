@@ -41,6 +41,18 @@ def main(args):
         os.remove(baza_plik)
     baza.connect()  # połączenie się z bazą
     baza.create_tables([Klasa, Uczen, Wynik])  # tworzymy tabele
+
+    kl3A = Klasa()  # instancja czyli oniekt klasy
+    kl3A.nazwa = '3A'
+    kl3A.roknaboru = 2010
+    kl3A.rokmatury = 2013
+    kl3A.save()
+    kl2A = Klasa(nazwa='2A', roknaboru=2009, rokmatury=2012)
+    kl2A.save()
+    ucz1 = Uczen(imie='Adam', nazwisko='Słodowy', plec=False, klasa=kl3A)
+    ucz1.save()
+    ucz2 = Uczen(imie='Ewa', nazwisko='Kolorowa', plec=True, klasa=kl2A)
+    ucz2.save()
     return 0
 
 
