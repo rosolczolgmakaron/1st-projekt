@@ -6,6 +6,7 @@ import csv
 import sqlite3
 import os.path
 
+
 def czy_jest(plik):
     """F. sprawdza, czy plik istnieje na dysku"""
     if not os.path.isfile(plik):
@@ -13,16 +14,17 @@ def czy_jest(plik):
         return False
     return True
 
+
 def czytaj_dane(plik, separator=","):
     dane = []  # pusta lista na rekordy
-    
+
     if not czy_jest(plik):
         return dane
-    
+
     with open(plik, 'r', newline='', encoding='utf-8') as plikcsv:
         tresc = csv.reader(plikcsv, delimiter=separator)
         for rekord in tresc:
-            dane.append(rekord)
+            dane.append(tuple(rekord))
     return dane
 
 
@@ -32,6 +34,7 @@ def ile_kolumn(cur, tab):
     for kol in cur.execute("PRAGMA table_info('" + tab + "')"):
         licznik += 1
     return licznik
+
 
 def main(args):
     # KONFIGURACJA #####################
@@ -62,13 +65,15 @@ def main(args):
         ile = len(dane[0])
         if naglowki:
             dane.pop(0)  # usunięcie rekordu z nagłówkami
-        
-        cur.executemany('INSERT INTO ' + tab + ' VALUES('+ ','.join(['?']*ile) +')', dane)
-        
+
+        cur.executemany('INSERT INTO ' + tab + ' VALUES(' +
+                        ','.join(['?'] * ile) + ')', dane)
+
     con.commit()
     con.close()
     return 0
 
+
 if __name__ == '__main__':
     import sys
-sys.exit(main(sys.argv))
+    sys.exit(main(sys.argv))
