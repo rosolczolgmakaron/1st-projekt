@@ -39,8 +39,38 @@ def kw10():
 
 
 def kw11():
-    """Suma wszystkich ocen"""
-    pass
+    """Po ile ocen mają uczniowie"""
+    query = (Ocena
+             .select(fn.Count(Ocena.ocena).alias('ile'), Ocena.uczen.nazwisko)
+             .join(Uczen)
+             .group_by(Uczen)
+             .order_by(SQL('ile').desc()))
+    for obj in query:
+        print(obj.uczen.nazwisko, obj.ile)
+
+
+def kw12():
+    """Średnie ocen poszczególnych uczniów"""
+    query = (Ocena
+             .select(fn.AVG(Ocena.ocena).alias('ile'), Ocena.uczen.nazwisko)
+             .join(Uczen)
+             .group_by(Uczen)
+             .order_by(SQL('ile').desc()))
+    for obj in query:
+        print(obj.uczen.nazwisko, round(obj.ile, 2))
+
+
+def kw13():
+    """Średnie ocen ucznia Szymczak z poszczególnych przedmiotów"""
+    query = (Ocena
+             .select(Ocena.uczen.nazwisko, Ocena.przedmiot.przedmiot, fn.AVG(Ocena.ocena).alias('srednia'))
+             .join(Uczen)
+             .join_from(Ocena, Przedmiot)
+             .where(Uczen.nazwisko == 'Szymczak')
+             .group_by(Ocena.przedmiot.przedmiot)
+             .order_by(SQL('srednia').desc()))
+    for obj in query:
+        print(obj.uczen.nazwisko, obj.przedmiot.przedmiot, round(obj.srednia, 2))
 
 
 def main(args):
@@ -58,7 +88,7 @@ def main(args):
 
     # for obj in eval(kwerendy[6]):
     #     print(obj.nazwisko, obj.imie, obj.egz_mat)
-    kw10()
+    kw13()
 
     baza.commit()
     baza.close()
