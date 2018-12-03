@@ -73,6 +73,21 @@ def kw13():
         print(obj.uczen.nazwisko, obj.przedmiot.przedmiot, round(obj.srednia, 2))
 
 
+def kw14():
+    """Ilu uczniów ma średnia powyżej 3.5 z wfu"""
+    query = (Ocena
+             .select(Ocena.uczen.nazwisko, fn.AVG(Ocena.ocena).alias('srednia'))
+             .join(Uczen)
+             .join_from(Ocena, Przedmiot)
+             .where(Ocena.przedmiot.przedmiot == 'WF')
+             .group_by(Ocena.uczen.nazwisko)
+             .order_by(SQL('srednia').desc()))
+    query = [obj for obj in query if obj.srednia > 3.5]
+    for obj in query:
+        print(obj.uczen.nazwisko, round(obj.srednia, 2))
+    print("Liczba uczniów: ", len(query))
+
+
 def main(args):
     baza.connect()  # połączenie z baża
 
@@ -88,7 +103,7 @@ def main(args):
 
     # for obj in eval(kwerendy[6]):
     #     print(obj.nazwisko, obj.imie, obj.egz_mat)
-    kw13()
+    kw14()
 
     baza.commit()
     baza.close()
