@@ -13,10 +13,15 @@
 <body>
    </hl>Lista pytań</hl>
 
-  {% for obj in query %}
+  {% for p in query %}
   <p>
     <!-- wypisujemy id i treść pytania -->
-    {{ obj.id }} {{ obj.pytanie }}
+    {{ p.id }} {{ p.pytanie }}
+    <ol>
+    {% for o in p.odpowiedzi %}
+      <li>{{ o.odpowiedz}}</li>
+    {% endfor %}
+    </ol>
   </p>
   {% endfor %}
 </body>
