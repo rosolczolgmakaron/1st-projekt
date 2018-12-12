@@ -7,23 +7,28 @@
 <head>
 <meta charset="utf-8" />
 <title>Czat - Pytania</title>
-
 </head>
 
 <body>
-   </hl>Lista pytań</hl>
-
+  <h1>Lista pytań</h1>
+  <form method="POST">
   {% for p in query %}
   <p>
     <!-- wypisujemy id i treść pytania -->
     {{ p.id }} {{ p.pytanie }}
-    <ol>
+    <br>
     {% for o in p.odpowiedzi %}
-      <li>{{ o.odpowiedz}}</li>
+      <label>
+        <input type="radio" value="{{ o.id }}" name="{{p.id}}">
+      {{ o.odpowiedz}}
+      </label>
     {% endfor %}
-    </ol>
+    <br>
+
   </p>
   {% endfor %}
+  <input type="submit" value="Zapisz">
+  </form>
 </body>
 
 </html>
