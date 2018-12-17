@@ -28,7 +28,7 @@ class Pytanie(BazaModel):
 class Odpowiedz(BazaModel):
     odpowiedz = CharField(null=False)
     pytanie = ForeignKeyField(Pytanie, related_name='odpowiedzi')
-    odpok = BooleanField()
+    odpok = IntegerField(default=0)
 
 
 if __name__ == '__main__':

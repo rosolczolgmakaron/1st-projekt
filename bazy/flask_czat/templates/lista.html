@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<!--
+   lista.html
+-->
+
+<head>
+<meta charset="utf-8" />
+<title>Czat - Pytania</title>
+</head>
+
+<body>
+  <h1>Lista pytań</h1>
+  {% for p in query %}
+  <p>
+    <!-- wypisujemy treść pytania -->
+    {{ p.id }} {{ p.pytanie }}
+  </p>
+  {% endfor %}
+  </form>
+</body>
+
+</html>
