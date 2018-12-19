@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<!--
+   lista.html
+-->
+
+<head>
+<meta charset="utf-8" />
+<title>{% block tytul %}{% endblock %}</title>
+<style type="text/css">
+	body = {
+		background: #FFC0CB;
+		color: #A52A2A;
+	}
+	#menu li {display: inline;}
+</style>
+</head>
+
+<body>
+	<ul id="menu">
+		<li><a href="{{url_for('lista')}}">Lista pytań</a></li>
+		<li><a href="{{url_for('quiz')}}">Quiz</a></li>
+		<li><a href="{{url_for('dodaj')}}">Dodaj</a></li>
+  </ul>
+  {% block h1 %}{% endblock %}
+  {% block tresc %}{% endblock %}
+</body>
+
+</html>
