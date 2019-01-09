@@ -1,0 +1,27 @@
+{% extends "szablon.html" %}
+{% block tytul %}Quiz – quiz{% endblock %}
+{% block h1 %}Quiz – odpowiedz na pytania{% endblock %}
+{% block tresc %}
+
+    <form method="POST">
+    <ol>
+    {% for p in query %}
+
+        <!-- wypisujemy id i treść pytania -->
+        <li>{{ p.pytanie }}
+
+        <ol class="alfabet">
+        {% for o in p.odpowiedzi %}
+            <li>
+                <input type="radio" value="{{ o.id }}" name="{{ p.id }}">
+                {{ o.odpowiedz }}
+            </li>
+        {% endfor %}
+        </ol>
+        </li>
+    {% endfor %}
+    </ol>
+    <input type="submit" value="Zapisz odpowiedzi">
+    </form>
+
+{% endblock %}

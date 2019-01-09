@@ -1,0 +1,15 @@
+/* quiz/static/style.css */
+
+#komunikaty {
+    width: 80%;
+    margin: 2em;
+    border: 2px solid green;
+    border-radius: 5px;
+    background-color: lightgrey;
+}
+span.blad { color: red; }
+span.sukces { color: green; }
+span.kom { color: blue; }
+
+ol.alfabet { list-style-type: lower-alpha; }
+.bg-nawigacja { background-color: #FF0426 ; }
