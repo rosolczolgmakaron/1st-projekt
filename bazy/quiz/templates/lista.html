@@ -5,8 +5,9 @@
   <h2>Lista pytań:</h2>
   <ol>
     {% for p in query %}
-
-        <li>{{ p.pytanie }}</li>
+        <li>{{ p.pytanie }}
+        <a href="{{url_for('usun', pid=p.id)}}" class='btn btn-sm btn-danger'>Usuń</a>
+        </li>
     {% endfor %}
   </ol>
 

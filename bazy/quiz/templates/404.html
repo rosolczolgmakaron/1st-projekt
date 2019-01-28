@@ -1,0 +1,24 @@
+{% extends "szablon.html" %}
+{% block tytul %}Quiz – strony nie znaleziono{% endblock %}
+{% block h1 %}ERROR{% endblock %}
+{% block tresc %}
+<style type="text/css">
+  .error1 {padding: 40px 15px; text-align: center;}
+  .error2 {margin-top: 15px; text-align: center;}
+  .error3 {}
+<div class="container">
+  <div class="row">
+    <div class="error1">
+      <h2>404 Nie znaleziono</h2>
+      <div class="error2">
+        Przepraszamy, wystąpił błąd.
+        <div class="error3">
+          <a href="{{url_for('index')}}">
+            <i class="icon-home"></i>
+          Strona główna</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
