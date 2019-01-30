@@ -11,17 +11,17 @@ blad1 = 'To pole jest wymagane'
 
 
 class OdpForm(FlaskForm):
-    id = HiddenField('Odpowiedź id')
-    pytanie = HiddenField('Pytanie id')
-    odpowiedz = StringField('Odpowiedź:',
-                            validators=[Required(message=blad1)],
-                            render_kw={'class': 'form-control'})
-    odpok = BooleanField('Poprawna:')
+  id = HiddenField('Odpowiedź id')
+  pytanie = HiddenField('Pytanie id')
+  odpowiedz = StringField('Odpowiedź:',
+                          validators=[Required(message=blad1)],
+                          render_kw={'class': 'form-control'})
+  odpok = BooleanField('Poprawna:')
 
 
 class DodajForm(FlaskForm):
-    id = HiddenField('Pytanie id')
-    pytanie = StringField('Treść pytania:',
-                          validators=[Required(message=blad1)])
-    kategoria = SelectField('Kategoria', coerce=int)
-    odpowiedzi = FieldList(FormField(OdpForm), min_entries=3)
+  id = HiddenField('Pytanie id')
+  pytanie = StringField('Treść pytania:',
+                        validators=[Required(message=blad1)])
+  kategoria = SelectField('Kategoria', coerce=int)
+  odpowiedzi = FieldList(FormField(OdpForm), min_entries=3)

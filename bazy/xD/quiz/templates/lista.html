@@ -1,14 +1,13 @@
 {% extends "szablon.html" %}
 {% block tytul %}Quiz – lista pytań{% endblock %}
-{% block h1 %}Quiz – lista pytań{% endblock %}
+{% block h1 %}Quiz – lista pytań{% endblock %}    
 {% block tresc %}
   <h2>Lista pytań</h2>
   <ol>
     {% for p in query %}
         <li class="elemdel">{{ p.pytanie }}
-        <a href="{{ url_for('edytuj', pid=p.id) }}" class="btn btn-sm btn-primary">Edytuj</a>
         <a href="{{ url_for('usun', pid=p.id) }}" class="btn btn-sm btn-danger">Usuń</a>
-
+        
         </li>
     {% endfor %}
   </ol>

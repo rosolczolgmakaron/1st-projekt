@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 #  views.py
-#
+#  
 from flask import Flask
 from flask import render_template, request, redirect, url_for, flash
 from flask import abort
@@ -11,11 +11,9 @@ from forms import *
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 @app.route('/lista')
 def lista():
@@ -23,9 +21,7 @@ def lista():
     return render_template('lista.html', query=pytania)
 
 # widok QUIZ
-
-
-@app.route('/quiz', methods=['GET', 'POST'])
+@app.route('/quiz', methods = ['GET', 'POST'])
 def quiz():
     print(request.form)
     if request.method == 'POST':
@@ -36,8 +32,7 @@ def quiz():
                 wynik += 1
 
     pytania = Pytanie.select().join(Odpowiedz).distinct().order_by(Pytanie.id)
-    return render_template('quiz.html', query=pytania)
-
+    return render_template('quiz.html', query = pytania)
 
 def flash_errors(form):
     """Odczytanie wszystkich błędów formularza i przygotowanie komunikatów"""
@@ -54,7 +49,7 @@ def flash_errors(form):
 def dodaj():
     form = DodajForm()
     form.kategoria.choices = [(k.id, k.kategoria) for k in Kategoria.select()]
-
+    
     if form.validate_on_submit():
         print(form.data)
         p = Pytanie(pytanie=form.pytanie.data, kategoria=form.kategoria.data)
@@ -71,7 +66,6 @@ def dodaj():
 
     return render_template('dodaj.html', form=form)
 
-
 def get_or_404(pid):
     try:
         p = Pytanie.get_by_id(pid)
@@ -79,11 +73,9 @@ def get_or_404(pid):
     except Pytanie.DoesNotExist:
         abort(404)
 
-
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
-
 
 @app.route('/usun/<int:pid>', methods=['GET', 'POST'])
 def usun(pid):
@@ -96,33 +88,3 @@ def usun(pid):
         p.delete_instance()
         return redirect(url_for('index'))
     return render_template('pytanie_usun.html', pytanie=p)
-
-
-@app.route('/edytuj/<int:pid>', methods=['GET', 'POST'])
-def edytuj(pid):
-    """edycja pytań i odpowiedzi"""
-    p = get_or_404(pid)
-    form = DodajForm(obj=p)
-    form.kategoria.choices = [(k.id, k.kategoria) for k in Kategoria.select()]
-    form.kategoria.data = p.kategoria.id
-
-    if form.validate_on_submit():
-        p.pytanie = form.pytanie.data
-        p.kategoria = form.kategoria.data
-        p.save()
-        for o in form.odpowiedzi.data:
-            odp = Odpowiedz.get_by_id(o['id'])
-            odp.odpowiedz = o['odpowiedz']
-            odp.odpok = int(o['odpok'])
-            odp.save()
-        flash("Zaktualizowano pytanie: {}".format(form.pytanie.data))
-        redirect(url_for('lista'))
-    else:
-        flash_errors(form)
-
-    odpowiedzi = []
-    for o in Odpowiedz.select().where(Odpowiedz.pytanie == p.id).dicts():
-        odpowiedzi.append(o)
-    form.odpowiedzi(data=odpowiedzi)
-
-    return render_template('edytuj.html', form=form)
