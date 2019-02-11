@@ -39,7 +39,7 @@ def dodaj_ucznia():
 
     if form.validate_on_submit():
         print(form.data)
-        p = Uczen(uczen=form.uczen.data)
+        p = Uczen(uczen=form.uczen.data, klasa=form.klasa.data)
         p.save()
         for o in form.uczen.data:
             ucz = uczen(imie=o['imie'],
@@ -62,9 +62,14 @@ def dodaj_klasy():
         k = Klasa(klasa=form.klasa.data, rok_nab=form.rok_nab.data, rok_mat=form.rok_mat.data)
         k.save()
         for o in form.klasa.data:
-            kl = Klasa(klasa=o['klasa'],
-                       rok_nab=o['rok_nab'],
-                       rok_mat=o['rok_mat'])
+            kl = Klasa(klasa=k.id,
+                       rok_nab=k.id,
+                       rok_mat=k.id,
+                       )
+            # kl = Klasa(klasa=o['klasa'],
+            #            rok_nab=o['rok_nab'],
+            #            rok_mat=o['rok_mat'],
+            #            )
             kl.save()
         flash("Dodano klase!", "sukces")
         return redirect(url_for('index'))

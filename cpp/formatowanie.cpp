@@ -20,8 +20,13 @@ int main(int argc, char **argv)
     cout << M_PI << endl;
     cout.precision(2);
     cout << M_PI << endl;
-    cout.width(20)
+    cout.width(20); // min. szerokość pola
+    cout.fill('-'); // wypełnienie pola
+    cout << lint << endl;
+    cout << setw(20) << lrze << endl;
 
+    printf("%12.3f\n", 10*M_PI);
+    printf("Hex: %#x\nOct: %#o\n", lint, lint);
 	return 0;
 }
 
