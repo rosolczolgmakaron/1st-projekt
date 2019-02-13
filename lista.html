@@ -1,0 +1,17 @@
+{% extends "szablon.html" %}
+{% block tytul %}Uczniowie - lista uczniów{% endblock %}
+{% block h1 %}Lista uczniów{% endblock %}
+{% block tresc %}
+  <h2>Lista uczniów</h2>
+  <ol>
+    {% for p in query %}
+        <p> Imie: {{p.imie}}</p>
+        <p> Nazwisko: {{p.nazwisko}}</p>
+        <p> Plec: {{p.plec}}</p>
+        <p> Klasa: {{p.klasa}}</p>
+
+        </li>
+    {% endfor %}
+  </ol>
+
+{% endblock %}

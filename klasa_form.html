@@ -1,0 +1,17 @@
+    <form method="POST" action="">
+        <div class="form-group">
+        {{ form.csrf_token }}
+
+    <label>Podaj dane dotyczące klasy</label><br>
+
+        {{ form.klasa.label }}<br>
+        {{ form.klasa(class_="form-control") }}<br>
+        {{ form.rok_nab.label }}<br>
+        {{ form.rok_nab(class_="form-control") }}<br>
+        {{ form.rok_mat.label }}<br>
+        {{ form.rok_mat(class_="form-control") }}<br>
+
+
+        <input type="submit" class="btn btn-default" value="Zapisz klasy">
+    </div>
+    </form>
