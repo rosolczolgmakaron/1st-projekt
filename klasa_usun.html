@@ -1,0 +1,16 @@
+{% extends "szablon.html" %}
+{% block tytul %}Uczniowie - usuwanie klas{% endblock %}
+{% block h1 %}Uczniowie - usuwanie klas{% endblock %}
+{% block tresc %}
+
+    <h2>Czy na pewno usunąć?</h2>
+
+    <form method="POST" action="{{ url_for('klasa_usun', pid=klasa.id) }}">
+
+    <p class="lead">Czy na pewno usunąć klase:</p>
+    <p>{{ klasa.klasa }}</p>
+    <input type="submit" class="btn btn-sm btn-danger" value="Usuń">
+
+    </form>
+
+{% endblock %}

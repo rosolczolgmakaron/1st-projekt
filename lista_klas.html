@@ -1,0 +1,19 @@
+{% extends "szablon.html" %}
+{% block tytul %}Uczniowie - lista klas{% endblock %}
+{% block h1 %}Lista klas{% endblock %}
+{% block tresc %}
+  <h2>Lista klas</h2>
+  <ol>
+    {% for p in query %}
+        <li class="elemdel">{{ p.klasa }}
+        <p> Klasa: {{p.klasa}}</p>
+        <p> Rok naboru: {{p.rok_nab}}</p>
+        <p> Rok matury: {{p.rok_mat}}</p>
+        <a href="{{ url_for('dodaj_klasy', pid=p.id) }}" class="btn btn-sm btn-primary">Edytuj</a>
+        <a href="{{ url_for('klasa_usun', pid=p.id) }}" class="btn btn-sm btn-danger">Usuń</a>
+
+        </li>
+    {% endfor %}
+  </ol>
+
+{% endblock %}
