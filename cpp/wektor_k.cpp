@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 class Wektor {
@@ -8,8 +9,10 @@ class Wektor {
     public:
         void pobierz(int);
         void wypisz();
+        void dlugosc();
         friend Wektor dodaj(Wektor, Wektor);
         friend Wektor iloczyn_sk(Wektor, Wektor);
+        
 };
 
 void Wektor::pobierz(int nr) {
@@ -20,6 +23,12 @@ void Wektor::pobierz(int nr) {
 
 void Wektor::wypisz() {
     cout << "[" << x << "," << y << "]" << endl;
+}
+
+void Wektor::dlugosc() {
+    float a = 0;
+    a = sqrt((x*x)+((y*y)));
+    cout << "Długość wektora: " << a;
 }
 
 Wektor dodaj(Wektor w1, Wektor w2) {
@@ -38,6 +47,7 @@ Wektor iloczyn_sk(Wektor w1, Wektor w2) {
     w4.y = w1.y * w2.y * wsp;
     return w4;
 }
+
 int main(int argc, char **argv)
 {
     Wektor w1;
@@ -52,6 +62,7 @@ int main(int argc, char **argv)
     Wektor w4;
     w4 = iloczyn_sk(w1, w2);
     w4.wypisz();
+    w4.dlugosc();
     return 0;
 }
 

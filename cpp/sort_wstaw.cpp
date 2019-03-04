@@ -32,9 +32,9 @@ int main(int argc, char **argv)
 {
     int ile = 8;
     int lista[] = {4, 3, 7, 0, 2, 3, 1, 9};
-    
+
     drukuj(lista, ile);
-    
+
     cout<<endl;
 
     sort_wstaw(lista, ile);
