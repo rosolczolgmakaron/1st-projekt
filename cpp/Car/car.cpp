@@ -1,5 +1,8 @@
+/*
+ * car.cpp
+ */
 #include <iostream>
-#include <cstdlih>
+#include <cstdlib>
 #include "car.h"
 
 using namespace std;
@@ -17,18 +20,18 @@ Car::Car(string mr, string ml, int r, int p) {
     przebieg = p;
 }
 
-Car::dodaj() {
-    cout << "Dodaj samochód: " << endl;
-    cout << "Marka: " << cin >> marka;
-    cout << "Rocznik: " << cin >> model;
-    cout << "Przebieg: " << cin >> przebieg;
+void Car::dodaj() {
+    cout << "Dodaj samochód:"<< endl;
+    cout << "Marka: "; cin>>marka;
+    cout << "Model: "; cin>>model;
+    cout << "Rocznik: "; cin>>rocznik;
+    cout << "Przebieg: "; cin>>przebieg;
 }
 
-Car::dane() {
-    cout << "\nTwoje piękne auto: "
-    cout << "Marka: " <<  marka << endl;
-    cout << "Rocznik: " << model << endl;
+void Car::dane() {
+    cout << "\nTwoje piękne auto:"<< endl;
+    cout << "Marka: " << marka << endl;
+    cout << "Model: " << model << endl;
+    cout << "Rocznik: " << rocznik << endl;
     cout << "Przebieg: " << przebieg << endl;
-
 }
-
